@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.RobertRisley.com/2010" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.RobertRisley.com/2010" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Manages the RWR.Windows.Components Settings Data</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.RobertRisley.com/2010">
+      <s:import namespace="http://www.RobertRisley.com/UserSettingsCD.xsd" />
+      <s:import namespace="http://www.RobertRisley.com/FormSettingsCD.xsd" />
+      <s:import namespace="http://tempuri.org/GridSettingsCD.xsd" />
+      <s:import namespace="http://tempuri.org/GridFiltersCD.xsd" />
+      <s:import schemaLocation="http://localhost/RWR.Web.Services/SettingsASMX.asmx?schema=UserSettingsCD" namespace="http://www.RobertRisley.com/UserSettingsCD.xsd" />
+      <s:import schemaLocation="http://localhost/RWR.Web.Services/SettingsASMX.asmx?schema=GridFiltersCD" namespace="http://tempuri.org/GridFiltersCD.xsd" />
+      <s:import schemaLocation="http://localhost/RWR.Web.Services/SettingsASMX.asmx?schema=FormSettingsCD" namespace="http://www.RobertRisley.com/FormSettingsCD.xsd" />
+      <s:import schemaLocation="http://localhost/RWR.Web.Services/SettingsASMX.asmx?schema=GridSettingsCD" namespace="http://tempuri.org/GridSettingsCD.xsd" />
+      <s:element name="GetUserSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserSettingsRQ" type="tns:GetUserSettingsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetUserSettingsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ClientTransactionId" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserSettingsRS" type="tns:GetUserSettingsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetUserSettingsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="UserSettingsCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://www.RobertRisley.com/UserSettingsCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseResponse" />
+      <s:element name="UpdateUserSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateUserSettingsRQ" type="tns:UpdateUserSettingsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateUserSettingsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="UserSettingsCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://www.RobertRisley.com/UserSettingsCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="UpdateUserSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateUserSettingsRS" type="tns:UpdateUserSettingsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateUserSettingsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="UserSettingsCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://www.RobertRisley.com/UserSettingsCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetFormSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFormSettingsRQ" type="tns:GetFormSettingsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetFormSettingsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FormName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetFormSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFormSettingsRS" type="tns:GetFormSettingsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetFormSettingsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FormSettingsCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://www.RobertRisley.com/FormSettingsCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="UpdateFormSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateFormSettingsRQ" type="tns:UpdateFormSettingsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateFormSettingsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FormSettingsCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://www.RobertRisley.com/FormSettingsCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="UpdateFormSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateFormSettingsRS" type="tns:UpdateFormSettingsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateFormSettingsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FormSettingsCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://www.RobertRisley.com/FormSettingsCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetGridSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGridSettingsRQ" type="tns:GetGridSettingsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetGridSettingsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GridName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetGridSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGridSettingsRS" type="tns:GetGridSettingsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetGridSettingsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GridSettingsCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://tempuri.org/GridSettingsCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="UpdateGridSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateGridSettingsRQ" type="tns:UpdateGridSettingsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateGridSettingsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GridSettingsCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://tempuri.org/GridSettingsCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="UpdateGridSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateGridSettingsRS" type="tns:UpdateGridSettingsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateGridSettingsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GridSettingsCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://tempuri.org/GridSettingsCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ReplaceGridSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReplaceGridSettingsRQ" type="tns:ReplaceGridSettingsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReplaceGridSettingsRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GridSettingsCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://tempuri.org/GridSettingsCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ReplaceGridSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReplaceGridSettingsRS" type="tns:ReplaceGridSettingsResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReplaceGridSettingsResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ReplaceSuccessful" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetGridFilters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGridFiltersRQ" type="tns:GetGridFiltersRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetGridFiltersRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GridName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetGridFiltersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGridFiltersRS" type="tns:GetGridFiltersResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetGridFiltersResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GridFiltersCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://tempuri.org/GridFiltersCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="UpdateGridFilters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateGridFiltersRQ" type="tns:UpdateGridFiltersRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateGridFiltersRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GridFiltersCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://tempuri.org/GridFiltersCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="UpdateGridFiltersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateGridFiltersRS" type="tns:UpdateGridFiltersResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdateGridFiltersResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GridFiltersCD">
+                <s:complexType>
+                  <s:sequence>
+                    <s:any namespace="http://tempuri.org/GridFiltersCD.xsd" />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="Ping">
+        <s:complexType />
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserSettings" />
+  </wsdl:message>
+  <wsdl:message name="GetUserSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserSettings" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFormSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFormSettings" />
+  </wsdl:message>
+  <wsdl:message name="GetFormSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFormSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFormSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFormSettings" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFormSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFormSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGridSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGridSettings" />
+  </wsdl:message>
+  <wsdl:message name="GetGridSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGridSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGridSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateGridSettings" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGridSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateGridSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReplaceGridSettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:ReplaceGridSettings" />
+  </wsdl:message>
+  <wsdl:message name="ReplaceGridSettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:ReplaceGridSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGridFiltersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGridFilters" />
+  </wsdl:message>
+  <wsdl:message name="GetGridFiltersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGridFiltersResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGridFiltersSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateGridFilters" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGridFiltersSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateGridFiltersResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SettingsContract">
+    <wsdl:operation name="GetUserSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get UserSettings</wsdl:documentation>
+      <wsdl:input message="tns:GetUserSettingsSoapIn" />
+      <wsdl:output message="tns:GetUserSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update UserSettings</wsdl:documentation>
+      <wsdl:input message="tns:UpdateUserSettingsSoapIn" />
+      <wsdl:output message="tns:UpdateUserSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFormSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get FormSettings</wsdl:documentation>
+      <wsdl:input message="tns:GetFormSettingsSoapIn" />
+      <wsdl:output message="tns:GetFormSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFormSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update FormSettings</wsdl:documentation>
+      <wsdl:input message="tns:UpdateFormSettingsSoapIn" />
+      <wsdl:output message="tns:UpdateFormSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGridSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get GridSettings</wsdl:documentation>
+      <wsdl:input message="tns:GetGridSettingsSoapIn" />
+      <wsdl:output message="tns:GetGridSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGridSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update GridSettings</wsdl:documentation>
+      <wsdl:input message="tns:UpdateGridSettingsSoapIn" />
+      <wsdl:output message="tns:UpdateGridSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceGridSettings">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Replace GridSettings</wsdl:documentation>
+      <wsdl:input message="tns:ReplaceGridSettingsSoapIn" />
+      <wsdl:output message="tns:ReplaceGridSettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGridFilters">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get GridFilters</wsdl:documentation>
+      <wsdl:input message="tns:GetGridFiltersSoapIn" />
+      <wsdl:output message="tns:GetGridFiltersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGridFilters">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update GridFilters</wsdl:documentation>
+      <wsdl:input message="tns:UpdateGridFiltersSoapIn" />
+      <wsdl:output message="tns:UpdateGridFiltersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ping</wsdl:documentation>
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SettingsContract" type="tns:SettingsContract">
+    <wsdl:documentation>
+      <wsi:Claim conformsTo="http://ws-i.org/profiles/basic/1.1" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" />
+    </wsdl:documentation>
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserSettings">
+      <soap:operation soapAction="http://www.RobertRisley.com/2010/GetUserSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserSettings">
+      <soap:operation soapAction="http://www.RobertRisley.com/2010/UpdateUserSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFormSettings">
+      <soap:operation soapAction="http://www.RobertRisley.com/2010/GetFormSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFormSettings">
+      <soap:operation soapAction="http://www.RobertRisley.com/2010/UpdateFormSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGridSettings">
+      <soap:operation soapAction="http://www.RobertRisley.com/2010/GetGridSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGridSettings">
+      <soap:operation soapAction="http://www.RobertRisley.com/2010/UpdateGridSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceGridSettings">
+      <soap:operation soapAction="http://www.RobertRisley.com/2010/ReplaceGridSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGridFilters">
+      <soap:operation soapAction="http://www.RobertRisley.com/2010/GetGridFilters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGridFilters">
+      <soap:operation soapAction="http://www.RobertRisley.com/2010/UpdateGridFilters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://www.RobertRisley.com/2010/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SettingsContract1" type="tns:SettingsContract">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserSettings">
+      <soap12:operation soapAction="http://www.RobertRisley.com/2010/GetUserSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserSettings">
+      <soap12:operation soapAction="http://www.RobertRisley.com/2010/UpdateUserSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFormSettings">
+      <soap12:operation soapAction="http://www.RobertRisley.com/2010/GetFormSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFormSettings">
+      <soap12:operation soapAction="http://www.RobertRisley.com/2010/UpdateFormSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGridSettings">
+      <soap12:operation soapAction="http://www.RobertRisley.com/2010/GetGridSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGridSettings">
+      <soap12:operation soapAction="http://www.RobertRisley.com/2010/UpdateGridSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceGridSettings">
+      <soap12:operation soapAction="http://www.RobertRisley.com/2010/ReplaceGridSettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGridFilters">
+      <soap12:operation soapAction="http://www.RobertRisley.com/2010/GetGridFilters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGridFilters">
+      <soap12:operation soapAction="http://www.RobertRisley.com/2010/UpdateGridFilters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://www.RobertRisley.com/2010/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SettingsServiceASMX">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Manages the RWR.Windows.Components Settings Data</wsdl:documentation>
+    <wsdl:port name="SettingsContract" binding="tns:SettingsContract">
+      <soap:address location="http://localhost/RWR.Web.Services/SettingsASMX.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SettingsContract1" binding="tns:SettingsContract1">
+      <soap12:address location="http://localhost/RWR.Web.Services/SettingsASMX.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

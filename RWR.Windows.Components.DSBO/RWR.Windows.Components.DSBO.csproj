@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8C7BB4C-593C-49C9-B5AC-0CE13CD5A100}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RWR.Windows.Components.DSBO</RootNamespace>
+    <AssemblyName>RWR.Windows.Components.DSBO</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\RWR.Windows.Components.DSBO.xml</DocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\RWR.Windows.Components.DSBO.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormSettingsCD.cs">
+      <DependentUpon>FormSettingsCD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingsCD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormSettingsCD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingsTD.cs">
+      <DependentUpon>FormSettingsTD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormSettingsTD.Designer.cs">
+      <DependentUpon>FormSettingsTD.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="GridFiltersCD.cs">
+      <DependentUpon>GridFiltersCD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GridFiltersCD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridFiltersCD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GridFiltersTD.cs">
+      <DependentUpon>GridFiltersTD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GridFiltersTD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridFiltersTD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GridSettingsCD.cs">
+      <DependentUpon>GridSettingsCD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GridSettingsCD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridSettingsCD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GridSettingsTD.cs">
+      <DependentUpon>GridSettingsTD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GridSettingsTD.Designer.cs">
+      <DependentUpon>GridSettingsTD.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Service References\SettingsServiceWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserSettingsCD.cs">
+      <DependentUpon>UserSettingsCD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserSettingsCD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserSettingsCD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserSettingsTD.cs">
+      <DependentUpon>UserSettingsTD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UserSettingsTD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserSettingsTD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SettingsServiceASMX\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FormSettingsTD.xsc">
+      <DependentUpon>FormSettingsTD.xsd</DependentUpon>
+    </None>
+    <None Include="FormSettingsTD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FormSettingsTD.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FormSettingsTD.xss">
+      <DependentUpon>FormSettingsTD.xsd</DependentUpon>
+    </None>
+    <None Include="GridSettingsTD.xsc">
+      <DependentUpon>GridSettingsTD.xsd</DependentUpon>
+    </None>
+    <None Include="GridSettingsTD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GridSettingsTD.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GridSettingsTD.xss">
+      <DependentUpon>GridSettingsTD.xsd</DependentUpon>
+    </None>
+    <None Include="UserSettingsTD.xsc">
+      <DependentUpon>UserSettingsTD.xsd</DependentUpon>
+    </None>
+    <None Include="UserSettingsTD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>UserSettingsTD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UserSettingsTD.xss">
+      <DependentUpon>UserSettingsTD.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FormSettingsCD.xsc">
+      <DependentUpon>FormSettingsCD.xsd</DependentUpon>
+    </None>
+    <None Include="FormSettingsCD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FormSettingsCD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FormSettingsCD.xss">
+      <DependentUpon>FormSettingsCD.xsd</DependentUpon>
+    </None>
+    <None Include="GridSettingsCD.xsc">
+      <DependentUpon>GridSettingsCD.xsd</DependentUpon>
+    </None>
+    <None Include="GridSettingsCD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GridSettingsCD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GridSettingsCD.xss">
+      <DependentUpon>GridSettingsCD.xsd</DependentUpon>
+    </None>
+    <None Include="UserSettingsCD.xsc">
+      <DependentUpon>UserSettingsCD.xsd</DependentUpon>
+    </None>
+    <None Include="UserSettingsCD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserSettingsCD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UserSettingsCD.xss">
+      <DependentUpon>UserSettingsCD.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RWR.Common\RWR.Common.csproj">
+      <Project>{13391A55-7D98-448F-959B-DA89338C34A3}</Project>
+      <Name>RWR.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/RWR.Web.Services/SettingsASMX.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SettingsServiceASMX\</RelPath>
+      <UpdateFromURL>http://localhost/RWR.Web.Services/SettingsASMX.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>RWR_Windows_Components_DSBO_SettingsServiceASMX_SettingsServiceASMX</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GridFiltersCD.xsc">
+      <DependentUpon>GridFiltersCD.xsd</DependentUpon>
+    </None>
+    <None Include="GridFiltersCD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GridFiltersCD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GridFiltersCD.xss">
+      <DependentUpon>GridFiltersCD.xsd</DependentUpon>
+    </None>
+    <None Include="GridFiltersTD.xsc">
+      <DependentUpon>GridFiltersTD.xsd</DependentUpon>
+    </None>
+    <None Include="GridFiltersTD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GridFiltersTD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GridFiltersTD.xss">
+      <DependentUpon>GridFiltersTD.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\GridFiltersCD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\SettingsASMX.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SettingsServiceWCF\FormSettingsCD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\GridFiltersCD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\GridSettingsCD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\SettingsService.xsd" />
+    <None Include="Service References\SettingsServiceWCF\SettingsService1.xsd" />
+    <None Include="Service References\SettingsServiceWCF\SettingsService2.xsd" />
+    <None Include="Service References\SettingsServiceWCF\SettingsService3.xsd" />
+    <None Include="Service References\SettingsServiceWCF\SettingsServiceWCF.wsdl" />
+    <None Include="Service References\SettingsServiceWCF\UserSettingsCD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\FormSettingsCD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\FormSettingsCD1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\GetFormSettingsResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\GetGridFiltersResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\GetGridSettingsResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\GetUserSettingsResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\GridFiltersCD1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\GridSettingsCD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\GridSettingsCD1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\ReplaceGridSettingsResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\SettingsASMX.disco" />
+    <None Include="Web References\SettingsServiceASMX\UpdateFormSettingsResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\UpdateGridFiltersResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\UpdateGridSettingsResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\UpdateUserSettingsResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\UserSettingsCD.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SettingsServiceASMX\UserSettingsCD1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service References\SettingsServiceWCFnotes.txt" />
+    <None Include="Service References\SettingsServiceWCF\configuration91.svcinfo" />
+    <None Include="Service References\SettingsServiceWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\configuration.svcinfo" />
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.FormSettingsCD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.GetFormSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.GetGridFiltersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.GetGridSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.GetUserSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.GridFiltersCD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.GridSettingsCD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.ReplaceGridSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.UpdateFormSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.UpdateGridFiltersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.UpdateGridSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.UpdateUserSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\RWR.Windows.Components.DSBO.SettingsServiceWCF.UserSettingsCD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SettingsServiceWCF\SettingsService.disco" />
+    <None Include="Service References\SettingsServiceWCF\SettingsService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SettingsServiceWCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestResults\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

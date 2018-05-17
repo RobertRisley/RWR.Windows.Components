@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d3b6f044-e8f6-4e78-9582-b4c559bfe2ca" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/SettingsService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SettingsServiceWCF.wsdl" MetadataType="Wsdl" ID="7c77a340-0bb6-48c0-8a33-675e0a271acb" SourceId="1" SourceUrl="http://localhost/SettingsService?wsdl" />
+    <MetadataFile FileName="GridSettingsCD.xsd" MetadataType="Schema" ID="5697aa75-08e4-4990-8c15-c5485a5f2b84" SourceId="1" SourceUrl="http://localhost/SettingsService?xsd=xsd6" />
+    <MetadataFile FileName="SettingsService.disco" MetadataType="Disco" ID="2d79149b-4ab6-48b7-b586-4b71524ac5ff" SourceId="1" SourceUrl="http://localhost/SettingsService?disco" />
+    <MetadataFile FileName="SettingsService.wsdl" MetadataType="Wsdl" ID="efdcfa7a-b594-4e49-93b0-c71b8e6b52de" SourceId="1" SourceUrl="http://localhost/SettingsService?wsdl=wsdl0" />
+    <MetadataFile FileName="FormSettingsCD.xsd" MetadataType="Schema" ID="9a631e91-aed8-4d46-a1a6-4128360264cd" SourceId="1" SourceUrl="http://localhost/SettingsService?xsd=xsd5" />
+    <MetadataFile FileName="SettingsService1.xsd" MetadataType="Schema" ID="2014ebcd-05cb-4d45-b6ea-3b11ffb9ce62" SourceId="1" SourceUrl="http://localhost/SettingsService?xsd=xsd2" />
+    <MetadataFile FileName="UserSettingsCD.xsd" MetadataType="Schema" ID="6808fb5a-fdfa-4667-a472-d265b9d90615" SourceId="1" SourceUrl="http://localhost/SettingsService?xsd=xsd3" />
+    <MetadataFile FileName="SettingsService2.xsd" MetadataType="Schema" ID="6795bb80-576e-472c-85b1-f31cadde28b0" SourceId="1" SourceUrl="http://localhost/SettingsService?xsd=xsd0" />
+    <MetadataFile FileName="SettingsService3.xsd" MetadataType="Schema" ID="0d10af69-a55f-43d2-b40a-787e01e2f026" SourceId="1" SourceUrl="http://localhost/SettingsService?xsd=xsd1" />
+    <MetadataFile FileName="GridFiltersCD.xsd" MetadataType="Schema" ID="9ec2236d-0f1d-48ad-9286-49d18e409341" SourceId="1" SourceUrl="http://localhost/SettingsService?xsd=xsd7" />
+    <MetadataFile FileName="SettingsService.xsd" MetadataType="Schema" ID="49faa7c8-69ea-40a1-bfa6-c321345fe9b1" SourceId="1" SourceUrl="http://localhost/SettingsService?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

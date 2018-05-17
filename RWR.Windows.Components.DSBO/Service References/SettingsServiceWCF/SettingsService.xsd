@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UserSettingsCD" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="UserSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://www.RobertRisley.com/UserSettingsCD.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FormSettingsCD" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="FormSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://www.RobertRisley.com/FormSettingsCD.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GridSettingsCD" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="GridSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/GridSettingsCD.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GridFiltersCD" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="GridFiltersCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/GridFiltersCD.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

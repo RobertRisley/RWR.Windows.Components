@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/RWR.Web.Services/SettingsASMX.asmx?wsdl" docRef="http://localhost/RWR.Web.Services/SettingsASMX.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/RWR.Web.Services/SettingsASMX.asmx" xmlns:q1="http://www.RobertRisley.com/2010" binding="q1:SettingsContract" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost/RWR.Web.Services/SettingsASMX.asmx" xmlns:q2="http://www.RobertRisley.com/2010" binding="q2:SettingsContract1" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

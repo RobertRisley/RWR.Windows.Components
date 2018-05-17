@@ -1,0 +1,5 @@
+//------------------------------------------------------------------------------
+//  After Add/Update/Configure Service Reference find the Reference.cs file
+//		add the "#pragma warning disable 1591" at the top
+//------------------------------------------------------------------------------
+#pragma warning disable 1591

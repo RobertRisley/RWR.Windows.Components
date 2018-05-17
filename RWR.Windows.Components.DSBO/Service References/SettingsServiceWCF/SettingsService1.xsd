@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="GetUserSettingsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetUserSettingsRequest" nillable="true" type="tns:GetUserSettingsRequest" />
+  <xs:complexType name="BaseRequest">
+    <xs:sequence>
+      <xs:element name="ClientTransactionId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseRequest" nillable="true" type="tns:BaseRequest" />
+  <xs:complexType name="GetUserSettingsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element name="UserSettingsCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="UserSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://www.RobertRisley.com/UserSettingsCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetUserSettingsResponse" nillable="true" type="tns:GetUserSettingsResponse" />
+  <xs:complexType name="BaseResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="BaseResponse" nillable="true" type="tns:BaseResponse" />
+  <xs:complexType name="UpdateUserSettingsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element name="UserSettingsCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="UserSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://www.RobertRisley.com/UserSettingsCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateUserSettingsRequest" nillable="true" type="tns:UpdateUserSettingsRequest" />
+  <xs:complexType name="UpdateUserSettingsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element name="UserSettingsCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="UserSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://www.RobertRisley.com/UserSettingsCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateUserSettingsResponse" nillable="true" type="tns:UpdateUserSettingsResponse" />
+  <xs:complexType name="GetFormSettingsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element name="FormName" nillable="true" type="xs:string" />
+          <xs:element name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetFormSettingsRequest" nillable="true" type="tns:GetFormSettingsRequest" />
+  <xs:complexType name="GetFormSettingsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element name="FormSettingsCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="FormSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://www.RobertRisley.com/FormSettingsCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetFormSettingsResponse" nillable="true" type="tns:GetFormSettingsResponse" />
+  <xs:complexType name="UpdateFormSettingsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element name="FormSettingsCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="FormSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://www.RobertRisley.com/FormSettingsCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateFormSettingsRequest" nillable="true" type="tns:UpdateFormSettingsRequest" />
+  <xs:complexType name="UpdateFormSettingsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element name="FormSettingsCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="FormSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://www.RobertRisley.com/FormSettingsCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateFormSettingsResponse" nillable="true" type="tns:UpdateFormSettingsResponse" />
+  <xs:complexType name="GetGridSettingsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element name="GridName" nillable="true" type="xs:string" />
+          <xs:element name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetGridSettingsRequest" nillable="true" type="tns:GetGridSettingsRequest" />
+  <xs:complexType name="GetGridSettingsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element name="GridSettingsCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="GridSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://tempuri.org/GridSettingsCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetGridSettingsResponse" nillable="true" type="tns:GetGridSettingsResponse" />
+  <xs:complexType name="UpdateGridSettingsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element name="GridSettingsCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="GridSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://tempuri.org/GridSettingsCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateGridSettingsRequest" nillable="true" type="tns:UpdateGridSettingsRequest" />
+  <xs:complexType name="UpdateGridSettingsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element name="GridSettingsCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="GridSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://tempuri.org/GridSettingsCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateGridSettingsResponse" nillable="true" type="tns:UpdateGridSettingsResponse" />
+  <xs:complexType name="ReplaceGridSettingsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element name="GridSettingsCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="GridSettingsCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://tempuri.org/GridSettingsCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReplaceGridSettingsRequest" nillable="true" type="tns:ReplaceGridSettingsRequest" />
+  <xs:complexType name="ReplaceGridSettingsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element name="ReplaceSuccessful" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReplaceGridSettingsResponse" nillable="true" type="tns:ReplaceGridSettingsResponse" />
+  <xs:complexType name="GetGridFiltersRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element name="GridName" nillable="true" type="xs:string" />
+          <xs:element name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetGridFiltersRequest" nillable="true" type="tns:GetGridFiltersRequest" />
+  <xs:complexType name="GetGridFiltersResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element name="GridFiltersCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="GridFiltersCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://tempuri.org/GridFiltersCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetGridFiltersResponse" nillable="true" type="tns:GetGridFiltersResponse" />
+  <xs:complexType name="UpdateGridFiltersRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element name="GridFiltersCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="GridFiltersCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://tempuri.org/GridFiltersCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateGridFiltersRequest" nillable="true" type="tns:UpdateGridFiltersRequest" />
+  <xs:complexType name="UpdateGridFiltersResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element name="GridFiltersCD" nillable="true">
+            <xs:complexType>
+              <xs:annotation>
+                <xs:appinfo>
+                  <ActualType Name="GridFiltersCD" Namespace="http://schemas.datacontract.org/2004/07/RWR.Windows.Components.DSBO" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                </xs:appinfo>
+              </xs:annotation>
+              <xs:sequence>
+                <xs:any namespace="http://tempuri.org/GridFiltersCD.xsd" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateGridFiltersResponse" nillable="true" type="tns:UpdateGridFiltersResponse" />
+</xs:schema>

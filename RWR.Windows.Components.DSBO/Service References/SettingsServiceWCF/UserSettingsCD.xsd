@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://www.RobertRisley.com/UserSettingsCD.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://www.RobertRisley.com/UserSettingsCD.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.RobertRisley.com/UserSettingsCD.xsd" id="UserSettingsCD" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="UserSettingsCD">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UserSettings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:Caption="User Name" default="anonymous" name="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="User Settings Xml" minOccurs="0" name="UserSettingsXml">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Settings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element default="DefaultKey" name="Key" type="xs:string" />
+              <xs:element minOccurs="0" name="Value" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:UserSettings" />
+      <xs:field xpath="mstns:UserName" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Settings_Constraint1">
+      <xs:selector xpath=".//mstns:Settings" />
+      <xs:field xpath="mstns:Key" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

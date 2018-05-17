@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.RobertRisley.com/2010/01" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SettingsServiceWCF" targetNamespace="http://www.RobertRisley.com/2010/01" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/SettingsService?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.RobertRisley.com/2010/01/Imports">
+      <xsd:import schemaLocation="http://localhost/SettingsService?xsd=xsd0" namespace="http://www.RobertRisley.com/2010/01" />
+      <xsd:import schemaLocation="http://localhost/SettingsService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/SettingsService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" />
+      <xsd:import schemaLocation="http://localhost/SettingsService?xsd=xsd3" namespace="http://www.RobertRisley.com/UserSettingsCD.xsd" />
+      <xsd:import schemaLocation="http://localhost/SettingsService?xsd=xsd4" />
+      <xsd:import schemaLocation="http://localhost/SettingsService?xsd=xsd5" namespace="http://www.RobertRisley.com/FormSettingsCD.xsd" />
+      <xsd:import schemaLocation="http://localhost/SettingsService?xsd=xsd6" namespace="http://tempuri.org/GridSettingsCD.xsd" />
+      <xsd:import schemaLocation="http://localhost/SettingsService?xsd=xsd7" namespace="http://tempuri.org/GridFiltersCD.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SettingsContract_GetUserSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserSettings" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_GetUserSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_UpdateUserSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserSettings" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_UpdateUserSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_GetFormSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFormSettings" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_GetFormSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFormSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_UpdateFormSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFormSettings" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_UpdateFormSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFormSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_GetGridSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGridSettings" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_GetGridSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGridSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_UpdateGridSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGridSettings" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_UpdateGridSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGridSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_ReplaceGridSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReplaceGridSettings" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_ReplaceGridSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReplaceGridSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_GetGridFilters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGridFilters" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_GetGridFilters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGridFiltersResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_UpdateGridFilters_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGridFilters" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_UpdateGridFilters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGridFiltersResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="SettingsContract_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SettingsContract">
+    <wsdl:operation name="GetUserSettings">
+      <wsdl:input wsaw:Action="GetUserSettings" message="tns:SettingsContract_GetUserSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.RobertRisley.com/2010/01/SettingsContract/GetUserSettingsResponse" message="tns:SettingsContract_GetUserSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserSettings">
+      <wsdl:input wsaw:Action="UpdateUserSettings" message="tns:SettingsContract_UpdateUserSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.RobertRisley.com/2010/01/SettingsContract/UpdateUserSettingsResponse" message="tns:SettingsContract_UpdateUserSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFormSettings">
+      <wsdl:input wsaw:Action="GetFormSettings" message="tns:SettingsContract_GetFormSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.RobertRisley.com/2010/01/SettingsContract/GetFormSettingsResponse" message="tns:SettingsContract_GetFormSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFormSettings">
+      <wsdl:input wsaw:Action="UpdateFormSettings" message="tns:SettingsContract_UpdateFormSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.RobertRisley.com/2010/01/SettingsContract/UpdateFormSettingsResponse" message="tns:SettingsContract_UpdateFormSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGridSettings">
+      <wsdl:input wsaw:Action="GetGridSettings" message="tns:SettingsContract_GetGridSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.RobertRisley.com/2010/01/SettingsContract/GetGridSettingsResponse" message="tns:SettingsContract_GetGridSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGridSettings">
+      <wsdl:input wsaw:Action="UpdateGridSettings" message="tns:SettingsContract_UpdateGridSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.RobertRisley.com/2010/01/SettingsContract/UpdateGridSettingsResponse" message="tns:SettingsContract_UpdateGridSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceGridSettings">
+      <wsdl:input wsaw:Action="ReplaceGridSettings" message="tns:SettingsContract_ReplaceGridSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.RobertRisley.com/2010/01/SettingsContract/ReplaceGridSettingsResponse" message="tns:SettingsContract_ReplaceGridSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGridFilters">
+      <wsdl:input wsaw:Action="GetGridFilters" message="tns:SettingsContract_GetGridFilters_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.RobertRisley.com/2010/01/SettingsContract/GetGridFiltersResponse" message="tns:SettingsContract_GetGridFilters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGridFilters">
+      <wsdl:input wsaw:Action="UpdateGridFilters" message="tns:SettingsContract_UpdateGridFilters_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.RobertRisley.com/2010/01/SettingsContract/UpdateGridFiltersResponse" message="tns:SettingsContract_UpdateGridFilters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="Ping" message="tns:SettingsContract_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.RobertRisley.com/2010/01/SettingsContract/PingResponse" message="tns:SettingsContract_Ping_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="SettingsServiceWCF">
+    <wsdl:port name="SettingsServiceTcpBinding" binding="i0:SettingsServiceTcpBinding">
+      <soap12:address location="net.tcp://localhost/SettingsService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost/SettingsService</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>Robert-Vista\Robert</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

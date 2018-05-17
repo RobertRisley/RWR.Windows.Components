@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.RobertRisley.com/2010/01" elementFormDefault="qualified" targetNamespace="http://www.RobertRisley.com/2010/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/SettingsService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" />
+  <xs:element name="GetUserSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="request" nillable="true" type="q1:GetUserSettingsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="GetUserSettingsResult" nillable="true" type="q2:GetUserSettingsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="request" nillable="true" type="q3:UpdateUserSettingsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="UpdateUserSettingsResult" nillable="true" type="q4:UpdateUserSettingsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFormSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="request" nillable="true" type="q5:GetFormSettingsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFormSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="GetFormSettingsResult" nillable="true" type="q6:GetFormSettingsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFormSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="request" nillable="true" type="q7:UpdateFormSettingsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFormSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="UpdateFormSettingsResult" nillable="true" type="q8:UpdateFormSettingsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGridSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="request" nillable="true" type="q9:GetGridSettingsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGridSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="GetGridSettingsResult" nillable="true" type="q10:GetGridSettingsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGridSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="request" nillable="true" type="q11:UpdateGridSettingsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGridSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="UpdateGridSettingsResult" nillable="true" type="q12:UpdateGridSettingsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReplaceGridSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="request" nillable="true" type="q13:ReplaceGridSettingsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReplaceGridSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="ReplaceGridSettingsResult" nillable="true" type="q14:ReplaceGridSettingsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGridFilters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="request" nillable="true" type="q15:GetGridFiltersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGridFiltersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="GetGridFiltersResult" nillable="true" type="q16:GetGridFiltersResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGridFilters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="request" nillable="true" type="q17:UpdateGridFiltersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGridFiltersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/RWR.MessageContracts" minOccurs="0" name="UpdateGridFiltersResult" nillable="true" type="q18:UpdateGridFiltersResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
